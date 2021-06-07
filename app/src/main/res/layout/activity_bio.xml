@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reset"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".BioActivity">
+
+    <EditText
+        android:id="@+id/bio_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_bio"
+        android:gravity="top|left"
+        android:hint="@string/bio"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:maxLines="15"
+        android:minLines="5"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/gilroy_bold"
+        android:scrollHorizontally="false"
+        android:scrollbars="vertical"
+        android:importantForAutofill="no"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/bio_edit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:text="@string/edit"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gilroy_bold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp" />
+
+</LinearLayout>

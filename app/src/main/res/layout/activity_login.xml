@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/login">
+
+    <EditText
+        android:id="@+id/login_email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:hint="@string/email"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:importantForAutofill="no"
+        android:fontFamily="@font/gilroy_bold"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/login_password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:hint="@string/password"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="@font/gilroy_bold"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/login_forgot_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textColor="#303030"
+        android:fontFamily="@font/gilroy_bold"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:fontFamily="@font/gilroy_bold"
+        android:background="@drawable/rounded_corner"/>
+
+</LinearLayout>

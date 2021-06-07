@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name" translatable="false">Rovers</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome !</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="register">Register Yourself</string>
+    <string name="login">Login to your Account</string>
+    <string name="email">Enter Your Email Here</string>
+    <string name="password">Enter Your Password Here</string>
+    <string name="cPassword">Confirm Password Here</string>
+    <string name="name">Enter Your Name Here</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="college">Enter Your College Name</string>
+    <string name="profile">Profile</string>
+    <string name="v1_0">V1.0</string>
+    <string name="back">BACK</string>
+    <string name="chennai">Chennai</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="update">Update Password</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="username_">Username: </string>
+    <string name="college_">College: </string>
+    <string name="bio_">Bio: </string>
+    <string name="imageButton">imageButton</string>
+    <string name="bio">                     Enter The Bio Here</string>
+    <string name="edit">Edit</string>
+    <string name="search">Search</string>
+    <string name="name_">Name: </string>
+    <string name="profileImage">profileImage</string>
+    <string name="instagram_">Instagram: </string>
+    <string name="instagram">Enter Your Instagram Profile Username</string>
+    <string name="ceo">CEO Siddhant Sonawane</string>
+    <string name="cto">CTO Mahanyasa Keesara</string>
+    <string name="search_">Search Here</string>
+    <string name="status">Status</string>
+    <string name="username">UserName</string>
+    <string name="userprofile">UserProfile</string>
+    <string name="imageUpload">ImageUpload</string>
+    <string name="choose">Choose</string>
+    <string name="upload">Upload</string>
+    <string name="epi">Edit Profile Image</string>
+    <string name="eih">Edit Instagram Handle</string>
+    <string name="ecn">Edit College Name</string>
+    <string name="eb">Edit Bio</string>
+    <string name="download">Download</string>
+    <string name="hello">Hello World</string>
+    <string name="support">Support</string>
+    <string name="imageIn">ImageIn</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="maps">Maps</string>
+    <string name="edit_info">Edit Info</string>
+    <string name="users">Users</string>
+
+
+
+    <array name="colleges">
+        <item>SRM IST Kattankulathur</item>
+        <item>SRM IMH Kattankulathur</item>
+        <item>SRM ISH Kattankulathur</item>
+        <item>SRM IST Ramapuram</item>
+        <item>SRM IST Vadapalani</item>
+        <item>SRM IST NCR Campus</item>
+    </array>
+</resources>
