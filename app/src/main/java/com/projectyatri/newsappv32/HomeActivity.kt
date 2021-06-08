@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.toolbox.JsonObjectRequest
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.projectyatri.newsappv32.ui.ChatActivity
 import kotlinx.android.synthetic.main.activity_home.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -72,12 +73,16 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
                     FirebaseAuth.getInstance().signOut()
                     val intent = Intent(this@HomeActivity, WelcomeActivity::class.java)
                     startActivity(intent)
-                    //finish()
+                    finish()
                 }
-                R.id.web-> {
+                R.id.web -> {
                     val openURL = Intent(android.content.Intent.ACTION_VIEW)
                     openURL.data = Uri.parse("https://crz2qdzfz7tk6lci869b9a-on.drv.tw/Wedsite/Ghoradeshwar%20web/Ghoradeshwar.html")
                     startActivity(openURL)
+                }
+                R.id.chat -> {
+                    val intent = Intent(this@HomeActivity, ChatActivity::class.java)
+                    startActivity(intent)
                 }
             }
             true

@@ -61,6 +61,7 @@
     <string name="users">Users</string>
     <string name="web">Web</string>
     <string name="chat">Chat Support</string>
+    <string name="sample_message">This is a sample message that will appear</string>
 
 
     <array name="colleges">

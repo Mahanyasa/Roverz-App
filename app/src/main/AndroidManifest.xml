@@ -23,6 +23,7 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".InstaActivity" />
         <activity android:name=".CollegeActivity" />
+        <activity android:name=".ui.ChatActivity" />
         <activity android:name=".BioActivity" />
         <activity android:name=".UpdatePasswordActivity" />
         <activity android:name=".ForgotPasswordActivity" />
