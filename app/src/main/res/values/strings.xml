@@ -62,6 +62,8 @@
     <string name="web">Web</string>
     <string name="chat">Chat Support</string>
     <string name="sample_message">This is a sample message that will appear</string>
+    <string name="type_message">Type a message...</string>
+    <string name="send">Send</string>
 
 
     <array name="colleges">
