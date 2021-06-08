@@ -59,7 +59,8 @@
     <string name="maps">Maps</string>
     <string name="edit_info">Edit Info</string>
     <string name="users">Users</string>
-
+    <string name="web">Web</string>
+    <string name="chat">Chat Support</string>
 
 
     <array name="colleges">

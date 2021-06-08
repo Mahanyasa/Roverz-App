@@ -23,7 +23,10 @@
     <item android:title="@string/sign_out"
         android:id="@+id/signOut"
         android:icon="@drawable/ic_baseline_login_24"/>
-    <item android:title="Web"
+    <item android:title="@string/web"
         android:id="@+id/web"
         android:icon="@drawable/ic_baseline_web_24"/>
+    <item android:title="@string/chat"
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_baseline_contact_support_24"/>
 </menu>
