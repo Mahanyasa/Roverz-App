@@ -72,6 +72,24 @@ object BotResponse {
                 }
             }
 
+            message.contains("query") -> {
+                when (random) {
+                    0 -> "Please contant us via email: Projectyatri@gmail.com if you have any problem with the content"
+                    1 -> "Please contant us via email: Projectyatri@gmail.com if you have any problem with the content"
+                    2 -> "Please contant us via email: Projectyatri@gmail.com if you have any problem with the content"
+                    else -> "error"
+                }
+            }
+
+            message.contains("question") -> {
+                when (random) {
+                    0 -> "Please contant us via email: Projectyatri@gmail.com if you have any problem with the content"
+                    1 -> "Please contant us via email: Projectyatri@gmail.com if you have any problem with the content"
+                    2 -> "Please contant us via email: Projectyatri@gmail.com if you have any problem with the content"
+                    else -> "error"
+                }
+            }
+
             //What time is it?
             message.contains("time")-> {
                 val timeStamp = Timestamp(System.currentTimeMillis())
