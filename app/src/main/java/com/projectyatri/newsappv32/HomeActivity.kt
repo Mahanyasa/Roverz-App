@@ -77,7 +77,7 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
                 }
                 R.id.web -> {
                     val openURL = Intent(android.content.Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://crz2qdzfz7tk6lci869b9a-on.drv.tw/Rovers Database/")
+                    openURL.data = Uri.parse("https://crz2qdzfz7tk6lci869b9a-on.drv.tw/Rovers_Database/")
                     startActivity(openURL)
                 }
                 R.id.chat -> {
