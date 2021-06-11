@@ -49,14 +49,14 @@ class BioActivity : AppCompatActivity() {
         })
         bio_edit_btn.setOnClickListener {
 
-            val bio: String = bio_edit.text.toString()
+                val bio: String = bio_edit.text.toString()
 
-            if(bio == ""){
-                Toast.makeText(this@BioActivity, "Please Enter Bio", Toast.LENGTH_LONG).show()
-            }
-            else{
-                firebaseUserId = mAuth.currentUser!!.uid
-                refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserId)
+                if(bio == ""){
+                    Toast.makeText(this@BioActivity, "Please Enter Bio", Toast.LENGTH_LONG).show()
+                }
+                else{
+                    firebaseUserId = mAuth.currentUser!!.uid
+                    refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserId)
 
                 val userHashMap = HashMap<String, Any>()
                 userHashMap["uid"] = firebaseUserId
