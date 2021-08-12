@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -25,12 +26,14 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var firebaseCollege: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide()
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setCustomView(R.layout.action_bar_layout)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropDownList)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)

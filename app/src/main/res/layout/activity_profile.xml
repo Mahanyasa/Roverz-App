@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
     android:orientation="vertical"
-    android:background="@drawable/reset"
     tools:ignore="ScrollViewCount"
     android:gravity="center">
     <LinearLayout

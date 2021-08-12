@@ -18,7 +18,7 @@ class InstaActivity : AppCompatActivity() {
     private var firebaseUserId: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide()
+
 
         var refUsers: DatabaseReference?
         val firebaseUser: FirebaseUser?

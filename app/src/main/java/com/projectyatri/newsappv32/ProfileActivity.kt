@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
@@ -31,7 +32,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide()
+
 
         val refUsers: DatabaseReference?
         val firebaseUser: FirebaseUser?
@@ -45,6 +46,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUser!!.uid)
         //val input: DatabaseReference = refUsers.child("Users")
         mAuth = FirebaseAuth.getInstance()
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setCustomView(R.layout.action_bar_layout)
 
         refUsers.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {

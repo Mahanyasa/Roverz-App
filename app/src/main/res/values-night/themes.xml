@@ -2,17 +2,16 @@
     <!-- Base application theme. -->
     <style name="Theme.NewsAppV32" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#303030</item>
-        <item name="colorPrimaryVariant">#303030</item>
-        <item name="colorOnPrimary">#303030</item>
-        <item name="android:statusBarColor" tools:targetApi="l">#303030</item>
+        <item name="colorPrimary">#ed2a39</item>
+        <item name="colorPrimaryVariant">#ed2a39</item>
+        <item name="colorOnPrimary">#ed2a39</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#ed2a39</item>
         <!-- Customize your theme here. -->
     </style>
 
     <style name="SplashScreenTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">#303030</item>
-        <item name="colorPrimaryVariant">#303030</item>
-        <item name="colorOnPrimary">@color/white</item>
-
+        <item name="colorPrimary">#ed2a39</item>
+        <item name="colorPrimaryVariant">#ed2a39</item>
+        <item name="colorOnPrimary">#ed2a39</item>
     </style>
 </resources>

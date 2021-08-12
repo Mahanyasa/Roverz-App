@@ -8,6 +8,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -27,7 +28,7 @@ class ProfileImageActivity : AppCompatActivity() {
     lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide()
+
 
         val refUsers: DatabaseReference?
         val firebaseUser: FirebaseUser?
@@ -40,6 +41,8 @@ class ProfileImageActivity : AppCompatActivity() {
         refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUser!!.uid)
         //val input: DatabaseReference = refUsers.child("Users")
         mAuth = FirebaseAuth.getInstance()
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setCustomView(R.layout.action_bar_layout)
 
         refUsers.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {

@@ -3,6 +3,7 @@ package com.projectyatri.newsappv32
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -19,10 +20,12 @@ class SearchActivity() : AppCompatActivity(), SearchItemClicked {
     private var firebaseUser: FirebaseUser? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide()
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setCustomView(R.layout.action_bar_layout)
 
         search_recyclerView.layoutManager = LinearLayoutManager(this)
         search_recyclerView.setHasFixedSize(true)

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
     android:orientation="vertical"
-    android:background="@drawable/reset">
+    android:background="@color/black">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,6 +33,8 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_header_menu"
         android:layout_gravity="start"
+        app:itemTextColor="@color/red"
+        android:background="@color/black"
         android:fitsSystemWindows="true"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

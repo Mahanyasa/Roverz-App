@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".EditActivity"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/reset">
+    android:gravity="center">
 
     <Button
         android:id="@+id/edit_profileImage_edit"
