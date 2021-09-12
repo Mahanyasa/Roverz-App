@@ -18,7 +18,7 @@ class Users {
         email: String,
         college: String,
         bio: String,
-        insta: String
+        insta: String,
     ) {
         this.uid = uid
         this.username = username
@@ -26,6 +26,7 @@ class Users {
         this.college = college
         this.bio = bio
         this.insta = insta
+
 
     }
 

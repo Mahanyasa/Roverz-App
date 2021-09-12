@@ -26,6 +26,8 @@ class SearchActivity() : AppCompatActivity(), SearchItemClicked {
         setContentView(R.layout.activity_search)
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         search_recyclerView.layoutManager = LinearLayoutManager(this)
         search_recyclerView.setHasFixedSize(true)
@@ -52,6 +54,10 @@ class SearchActivity() : AppCompatActivity(), SearchItemClicked {
             }
         })
 
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 

@@ -4,9 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Toast
+import android.view.ViewGroup
+import android.widget.*
 import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -19,89 +18,16 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mAuth: FirebaseAuth
     lateinit var refUsers: DatabaseReference
     private var firebaseUserId: String = ""
-    val dropDownList = arrayOf(
-        "SRM IST Kattankulathur", "SRM IMH Kattankulathur", "SRM ISH Kattankulathur",
-        "SRM IST Ramapuram", "SRM IST Vadapalani", "SRM IST NCR Campus"
-    )
-    lateinit var firebaseCollege: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
-
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropDownList)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-        register_college_edit.adapter = adapter
-        register_college_edit.onItemSelectedListener = object : AdapterView.OnItemSelectedListener,
-            AdapterView.OnItemClickListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                if (register_college_edit.selectedItemPosition == 0){
-                    condition1()
-                }
-                if (register_college_edit.selectedItemPosition == 1){
-                    condition2()
-                }
-                if (register_college_edit.selectedItemPosition == 2){
-                    condition3()
-                }
-                if (register_college_edit.selectedItemPosition == 3){
-                    condition4()
-                }
-                if (register_college_edit.selectedItemPosition == 4){
-                    condition5()
-                }
-                if (register_college_edit.selectedItemPosition == 5){
-                    condition6()
-                }
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
-            }
-
-        }
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         register_btn.setOnClickListener(this)
-        }
-
-    private fun condition1() {
-        //Toast.makeText(this@CollegeActivity, "Selected Item" + college_edit.selectedItem, Toast.LENGTH_LONG ).show()
-        firebaseCollege = register_college_edit.selectedItem.toString()
-    }
-
-    private fun condition2() {
-        //Toast.makeText(this@CollegeActivity, "Selected Item" + college_edit.selectedItem, Toast.LENGTH_LONG ).show()
-        firebaseCollege = register_college_edit.selectedItem.toString()
-    }
-
-    private fun condition3() {
-        //Toast.makeText(this@CollegeActivity, "Selected Item" + college_edit.selectedItem, Toast.LENGTH_LONG ).show()
-        firebaseCollege = register_college_edit.selectedItem.toString()
-    }
-
-    private fun condition4() {
-        //Toast.makeText(this@CollegeActivity, "Selected Item" + college_edit.selectedItem, Toast.LENGTH_LONG ).show()
-        firebaseCollege = register_college_edit.selectedItem.toString()
-    }
-
-    private fun condition5() {
-        //Toast.makeText(this@CollegeActivity, "Selected Item" + college_edit.selectedItem, Toast.LENGTH_LONG ).show()
-        firebaseCollege = register_college_edit.selectedItem.toString()
-    }
-
-    private fun condition6() {
-        //Toast.makeText(this@CollegeActivity, "Selected Item" + college_edit.selectedItem, Toast.LENGTH_LONG ).show()
-        firebaseCollege = register_college_edit.selectedItem.toString()
     }
     override fun onClick(view: View?){
         when(view!!.id){
@@ -110,7 +36,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                 val email: String = register_email_edit.text.toString()
                 val password: String = register_password_edit.text.toString()
                 val cPassword: String = register_cPassword_edit.text.toString()
-                //val college: String = register_college_edit.text.toString()
+                val college: String = register_college_edit.text.toString()
 
                 if (username == "" || email == "" || password == "" || cPassword == "" ) {
                     Toast.makeText(this@RegisterActivity, "Please Enter All Fields Correctly",
@@ -135,7 +61,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                                 val userHashMap = HashMap<String, Any>()
                                 userHashMap["uid"] = firebaseUserId
                                 userHashMap["username"] = username
-                                userHashMap["college"] = firebaseCollege
+                                userHashMap["college"] = college
                                 userHashMap["email"] = email
 
                                 refUsers.updateChildren(userHashMap).addOnCompleteListener { task ->
@@ -157,7 +83,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                             }
                         }
                 }
-                    }
-                }
             }
         }
+    }
+}

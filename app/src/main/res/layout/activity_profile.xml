@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:ignore="ScrollViewCount"
     android:gravity="center">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,54 +27,93 @@
             android:src="@drawable/ic_profile"/>
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"
+            android:text="Name"/>
+
+        <TextView
             android:id="@+id/profile_username_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="italic"
-            android:gravity="center"
-            android:textColor="@color/black"
+            android:textColor="@color/red"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/profile_insta_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="15sp"
-            android:gravity="center"
-            android:fontFamily="@font/gilroy_bold"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="5dp"/>
+            android:textSize="20sp"
+            android:text="Instagram Handle"/>
+
+        <TextView
+            android:id="@+id/profile_insta_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"
+            android:text="Studied At"/>
 
         <TextView
             android:id="@+id/profile_college_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="italic"
-            android:gravity="center"
+            android:textColor="@color/red"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:textSize="15sp"
-            android:fontFamily="@font/gilroy_bold"/>
+            android:textSize="20sp"
+            android:text="Bio"/>
 
         <TextView
             android:id="@+id/profile_bio_text"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:gravity="center|top"
+            android:gravity="top"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColor="@color/red"
+            android:textSize="20sp"
             android:textStyle="italic" />
     </LinearLayout>
 

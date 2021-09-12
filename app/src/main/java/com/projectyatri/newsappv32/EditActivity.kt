@@ -13,6 +13,8 @@ class EditActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edit)
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         edit_profileImage_edit.setOnClickListener {
@@ -31,5 +33,9 @@ class EditActivity : AppCompatActivity() {
             val intent = Intent(this@EditActivity, BioActivity::class.java)
             startActivity(intent)
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".BioActivity">
 
-    <Spinner
+    <EditText
         android:id="@+id/college_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

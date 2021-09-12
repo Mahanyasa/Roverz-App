@@ -16,9 +16,6 @@ class CollegeActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mAuth: FirebaseAuth
     private var firebaseUserId: String = ""
-    val dropDownList = arrayOf("SRM IST Kattankulathur" , "SRM IMH Kattankulathur", "SRM ISH Kattankulathur",
-        "SRM IST Ramapuram", "SRM IST Vadapalani", "SRM IST NCR Campus")
-    lateinit var firebaseCollege: String
     lateinit var refUsers: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,43 +30,8 @@ class CollegeActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_college)
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
-
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropDownList)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-        val editCollege: Spinner = findViewById(R.id.college_edit)
-        editCollege.adapter = adapter
-        editCollege.onItemSelectedListener = object : AdapterView.OnItemSelectedListener,
-            AdapterView.OnItemClickListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                if (editCollege.selectedItemPosition == 0){
-                    condition1()
-                }
-                if (editCollege.selectedItemPosition == 1){
-                    condition2()
-                }
-                if (editCollege.selectedItemPosition == 2){
-                    condition3()
-                }
-                if (editCollege.selectedItemPosition == 3){
-                    condition4()
-                }
-                if (editCollege.selectedItemPosition == 4){
-                    condition5()
-                }
-                if (editCollege.selectedItemPosition == 5){
-                    condition6()
-                }
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
-            }
-
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         firebaseUser =FirebaseAuth.getInstance().currentUser
         refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUser!!.uid)
@@ -94,41 +56,22 @@ class CollegeActivity : AppCompatActivity(), View.OnClickListener {
             college_edit_btn.setOnClickListener (this)
             //val college: String = college_edit.toString()
             }
-
-
-    private fun condition1(){
-
-        firebaseCollege = college_edit.selectedItem.toString()
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
-    private fun condition2(){
 
-        firebaseCollege = college_edit.selectedItem.toString()
-    }
-    private fun condition3(){
 
-        firebaseCollege = college_edit.selectedItem.toString()
-    }
-    private fun condition4(){
-
-        firebaseCollege = college_edit.selectedItem.toString()
-    }
-    private fun condition5(){
-
-        firebaseCollege = college_edit.selectedItem.toString()
-    }
-    private fun condition6(){
-
-        firebaseCollege = college_edit.selectedItem.toString()
-    }
     override fun onClick(view: View?){
         when(view!!.id){
             R.id.college_edit_btn -> {
+                    val collegeEdit : String = college_edit.text.toString()
                     firebaseUserId = mAuth.currentUser!!.uid
                     refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserId)
 
                     val userHashMap = HashMap<String, Any>()
                     userHashMap["uid"] = firebaseUserId
-                    userHashMap["college"] = firebaseCollege
+                    userHashMap["college"] = collegeEdit
 
                     refUsers.updateChildren(userHashMap).addOnCompleteListener { task ->
                         if (task.isSuccessful) {

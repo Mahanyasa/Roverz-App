@@ -43,6 +43,8 @@ class ProfileImageActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         refUsers.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
@@ -67,6 +69,10 @@ class ProfileImageActivity : AppCompatActivity() {
         binding.profileImageUploadBtn.setOnClickListener {
             uploadImage()
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun uploadImage() {

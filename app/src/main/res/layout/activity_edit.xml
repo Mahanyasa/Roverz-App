@@ -12,6 +12,7 @@
         android:id="@+id/edit_profileImage_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_margin="10dp"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/gilroy_bold"
@@ -22,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/gilroy_bold"
         android:text="@string/eih"/>
@@ -31,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/gilroy_bold"
         android:text="@string/ecn"/>
@@ -40,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/gilroy_bold"
         android:text="@string/eb"/>

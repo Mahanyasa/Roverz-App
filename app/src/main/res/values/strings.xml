@@ -18,7 +18,7 @@
     <string name="sign_out">Sign Out</string>
     <string name="college">Enter Your College Name</string>
     <string name="profile">Profile</string>
-    <string name="v1_0">V1.0</string>
+    <string name="version">beta_2021.1.3</string>
     <string name="back">BACK</string>
     <string name="chennai">Chennai</string>
     <string name="forgot">Forgot Password</string>
@@ -30,7 +30,7 @@
     <string name="college_">College: </string>
     <string name="bio_">Bio: </string>
     <string name="imageButton">imageButton</string>
-    <string name="bio">                     Enter The Bio Here</string>
+    <string name="bio">Enter The Bio Here</string>
     <string name="edit">Edit</string>
     <string name="search">Search</string>
     <string name="name_">Name: </string>
@@ -62,16 +62,8 @@
     <string name="web">Web</string>
     <string name="chat">Chat Support</string>
     <string name="sample_message">This is a sample message that will appear</string>
-    <string name="type_message">Type a message...</string>
+    <string name="type_message">Type a message…</string>
     <string name="send">Send</string>
+    <string name="place">Where do you Live?</string>
 
-
-    <array name="colleges">
-        <item>SRM IST Kattankulathur</item>
-        <item>SRM IMH Kattankulathur</item>
-        <item>SRM ISH Kattankulathur</item>
-        <item>SRM IST Ramapuram</item>
-        <item>SRM IST Vadapalani</item>
-        <item>SRM IST NCR Campus</item>
-    </array>
 </resources>

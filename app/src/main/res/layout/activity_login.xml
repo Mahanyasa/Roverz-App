@@ -22,6 +22,7 @@
         android:importantForAutofill="no"
         android:fontFamily="@font/gilroy_bold"
         android:inputType="textEmailAddress"/>
+
     <EditText
         android:id="@+id/login_password_edit"
         android:layout_width="match_parent"
@@ -37,14 +38,6 @@
         android:importantForAutofill="no"
         android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/login_forgot_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        android:textColor="#303030"
-        android:fontFamily="@font/gilroy_bold"/>
-
     <Button
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
@@ -56,5 +49,13 @@
         android:textSize="15sp"
         android:fontFamily="@font/gilroy_bold"
         android:background="@drawable/rounded_corner"/>
+
+    <TextView
+        android:id="@+id/login_forgot_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroy_bold"/>
 
 </LinearLayout>

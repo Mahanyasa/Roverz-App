@@ -48,6 +48,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         refUsers.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
@@ -75,6 +77,10 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         profileImage.setOnClickListener (this)
         profile_insta_text.setOnClickListener(this)
         profile_college_text.setOnClickListener(this)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
     override fun onClick(view: View?) {
         when (view!!.id) {
