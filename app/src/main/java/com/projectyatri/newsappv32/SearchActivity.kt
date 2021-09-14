@@ -27,7 +27,6 @@ class SearchActivity() : AppCompatActivity(), SearchItemClicked {
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         search_recyclerView.layoutManager = LinearLayoutManager(this)
         search_recyclerView.setHasFixedSize(true)

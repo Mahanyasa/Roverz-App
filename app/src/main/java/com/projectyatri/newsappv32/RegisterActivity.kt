@@ -27,6 +27,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         register_btn.setOnClickListener(this)
     }
     override fun onClick(view: View?){

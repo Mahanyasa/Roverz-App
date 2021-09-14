@@ -14,8 +14,6 @@ class EditActivity : AppCompatActivity() {
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
 
         edit_profileImage_edit.setOnClickListener {
             val intent = Intent(this@EditActivity, ProfileImageActivity::class.java)

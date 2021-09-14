@@ -40,6 +40,7 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val nav: NavigationView = findViewById(R.id.navView)
         nav.setNavigationItemSelectedListener {
             when(it.itemId){
