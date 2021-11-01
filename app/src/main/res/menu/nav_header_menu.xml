@@ -8,16 +8,12 @@
         android:id="@+id/settings" />
     <item android:id="@+id/search"
         android:title="@string/users" />
-    <item android:title="@string/download"
-        android:id="@+id/download" />
-    <item android:title="@string/maps"
+    <item android:title="@string/test"
         android:id="@+id/maps"/>
     <item android:title="@string/update"
         android:id="@+id/updatePassword" />
     <item android:title="@string/sign_out"
         android:id="@+id/signOut"/>
-    <item android:title="@string/web"
-        android:id="@+id/web"/>
     <item android:title="@string/chat"
         android:id="@+id/chat"/>
 </menu>

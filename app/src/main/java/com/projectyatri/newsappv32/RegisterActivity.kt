@@ -30,6 +30,10 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
         register_btn.setOnClickListener(this)
     }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
     override fun onClick(view: View?){
         when(view!!.id){
             R.id.register_btn ->{

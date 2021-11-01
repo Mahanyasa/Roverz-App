@@ -65,5 +65,16 @@
     <string name="type_message">Type a message…</string>
     <string name="send">Send</string>
     <string name="place">Where do you Live?</string>
+    <string name="test">Test</string>
+    <string name="todo">TODO</string>
+    <string name="ghoradeshwar">Ghoradeshwar</string>
+    <string name="kundam_mala">Kundam Mala</string>
+    <string name="kasarsai_dam">Kasarsai Dam</string>
+    <string name="fc_road">FC Road</string>
+    <string name="aga_khan_palace">Aga Khan Palace</string>
+    <string name="bhandara_mountain">Bhandara Mountain</string>
+    <string name="jadhavwadi_dam">Jadhavwadi Dam</string>
+    <string name="tiger_point">Tiger Point</string>
+    <string name="goodluck_cafe">Goodluck Cafe</string>
 
 </resources>

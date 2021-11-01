@@ -2,21 +2,17 @@ package com.projectyatri.newsappv32
 
 import android.content.Intent
 import android.net.Uri
-import com.android.volley.Request
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.browser.customtabs.CustomTabsIntent
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.volley.toolbox.JsonObjectRequest
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.projectyatri.newsappv32.ui.ChatActivity
 import kotlinx.android.synthetic.main.activity_home.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 class   HomeActivity : AppCompatActivity(), NewsItemClicked {
 
@@ -31,10 +27,51 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        fetchData()
-        mAdapter = NewsListAdapter(this)
-        recyclerView.adapter = mAdapter
+        floating_button.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Ghoradeshwar/Ghoradeshwar.html")
+            startActivity(openURL)
+        }
+        floating_button_1.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Kundam%20mala/Kundam%20Mala.html")
+            startActivity(openURL)
+        }
+        floating_button_2.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Kasarsai%20Dam/Kasarsai%20Dam.html")
+            startActivity(openURL)
+        }
+        floating_button_3.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Aga%20Khan%20Palace/Aga%20Khan%20Palace.html")
+            startActivity(openURL)
+        }
+        floating_button_4.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/FC%20Road/FC%20Road.html")
+            startActivity(openURL)
+        }
+        floating_button_5.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Bhandara%20Mountain/Bhandara%20Mountain.html")
+            startActivity(openURL)
+        }
+        floating_button_6.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Jadhavwadi%20Dam/Jadhavwadi%20Dam.html")
+            startActivity(openURL)
+        }
+        floating_button_7.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Tiger%20Point/Tiger%20Point.html")
+            startActivity(openURL)
+        }
+        floating_button_8.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://krioddhzit65zk0i4tiryw-on.drv.tw/www.roverz.tech/Goodluck%20Cafe/Goodluck%20Cafe.html")
+            startActivity(openURL)
+        }
 
         mAuth = FirebaseAuth.getInstance()
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
@@ -52,15 +89,9 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
                     val intent = Intent(this@HomeActivity, EditActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.download -> {
-                    val openURL = Intent(android.content.Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://rebrand.ly/ProjectYatriAppVersion")
-                    startActivity(openURL)
-                }
                 R.id.maps ->{
-                    val openURL = Intent(android.content.Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://www.google.com/maps/place/India/")
-                    startActivity(openURL)
+                    val intent = Intent(this@HomeActivity, TestActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.updatePassword -> {
                     val intent = Intent(this@HomeActivity, UpdatePasswordActivity::class.java)
@@ -75,11 +106,6 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
                     val intent = Intent(this@HomeActivity, WelcomeActivity::class.java)
                     startActivity(intent)
                     finish()
-                }
-                R.id.web -> {
-                    val openURL = Intent(android.content.Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://crz2qdzfz7tk6lci869b9a-on.drv.tw/Rovers_Database/")
-                    startActivity(openURL)
                 }
                 R.id.chat -> {
                     val intent = Intent(this@HomeActivity, ChatActivity::class.java)
@@ -97,39 +123,6 @@ class   HomeActivity : AppCompatActivity(), NewsItemClicked {
         }
         return super.onOptionsItemSelected(item)
     }
-
-    
-
-    private fun fetchData() {
-        val url = "https://saurav.tech/NewsAPI/everything/cnn.json"
-        val jsonObjectRequest = JsonObjectRequest(
-            Request.Method.GET,
-            url,
-            null,
-            {
-                val newsJsonArray = it.getJSONArray("articles")
-                val newsArray = ArrayList<News>()
-                for (i in 0 until newsJsonArray.length()) {
-                    val newsJsonObject = newsJsonArray.getJSONObject(i)
-                    val news = News(
-                        title = newsJsonObject.getString("title"),
-                        author = newsJsonObject.getString("author"),
-                        url = newsJsonObject.getString("url"),
-                        imageUrl = newsJsonObject.getString("urlToImage")
-                    )
-                    newsArray.add(news)
-                }
-                mAdapter.updateNews(newsArray)
-            },
-            {
-
-            }
-
-        )
-        MySingleton.getInstance(this).addTORequestQueue(jsonObjectRequest)
-
-    }
-
 
     override fun onItemClicked(item: News) {
         val builder = CustomTabsIntent.Builder()
